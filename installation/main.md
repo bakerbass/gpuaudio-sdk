@@ -30,8 +30,8 @@
 * Initialize submodules `git submodule update --init --recursive`
 
 ### Build targeting Nvidia devices
-* Configure with `cmake -S . -B @BUILD -G "Visual Studio 17 2022" -DWITH_HIP:BOOL=false -DCUDA_VERSION="12.9"`
-* Build with `cmake --build @BUILD --config RelWithDebInfo --parallel`
+* Configure with `cmake -S . -B "@BUILD" -G "Visual Studio 17 2022" -DWITH_HIP:BOOL=false -DCUDA_VERSION="12.9"`
+* Build with `cmake --build "@BUILD" --config RelWithDebInfo --parallel`
 
 ### Build targeting AMD devices
 * Set `PERL_PATH` to the location of your perl interpreter. In case of StrawberryPerl it would be `C:\Strawberry\perl\bin` by default (this step can be skipped if only Nvidia binaries are being built)
